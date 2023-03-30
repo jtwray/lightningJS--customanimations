@@ -98,10 +98,12 @@ export default class App extends Lightning.Component {
           repeat: -1,
           repeatDelay: 0.5,
           delay,
-          actions: {
-            p: 'y',
-            v: { 0: 0, 0.5: -40, 1: 0 },
-          },
+          actions: [
+            {
+              p: 'y',
+              v: { 0: 0, 0.5: -40, 1: 0 },
+            },
+          ],
         })
         .start()
       delay += 0.2
