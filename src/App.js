@@ -32,6 +32,42 @@ export default class App extends Lightning.Component {
         color: 0xfffbb03b,
         src: Utils.asset('images/background.png'),
       },
+      Loader: {
+        w: 100,
+        x: 960,
+        y: 540,
+        mount: 0.5,
+        flex: {
+          justifyContent: 'space-evenly',
+        },
+        Dot1: {
+          rect: true,
+          w: 30,
+          h: 30,
+          shader: {
+            type: Lightning.shaders.RoundedRectangle,
+            radius: 15,
+          },
+        },
+        Dot2: {
+          rect: true,
+          w: 30,
+          h: 30,
+          shader: {
+            type: Lightning.shaders.RoundedRectangle,
+            radius: 15,
+          },
+        },
+        Dot3: {
+          rect: true,
+          w: 30,
+          h: 30,
+          shader: {
+            type: Lightning.shaders.RoundedRectangle,
+            radius: 15,
+          },
+        },
+      },
       Reveal: {
         w: 1920,
         flex: {
