@@ -33,7 +33,7 @@ export default class App extends Lightning.Component {
         src: Utils.asset('images/background.png'),
       },
       Loader: {
-        w: 100,
+        w: 120,
         x: 960,
         y: 540,
         mount: 0.5,
@@ -90,6 +90,16 @@ export default class App extends Lightning.Component {
   }
 
   _init() {
+    let delay = 0
+    for (const dot of this.tag('Loader').children) {
+      dot.animation({
+        duration: 1,
+        repeat: -1,
+        repeatDelay: 0.5,
+        delay,
+      })
+    }
+
     this.tag('Reveal')
       .animation({
         duration: 1,
