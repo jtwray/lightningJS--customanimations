@@ -32,7 +32,24 @@ export default class App extends Lightning.Component {
         color: 0xfffbb03b,
         src: Utils.asset('images/background.png'),
       },
-      Reveal: {},
+      Reveal: {
+        w: 1920,
+        flex: {
+          justifyContent: 'space-between',
+        },
+        Left: {
+          rect: true,
+          w: 940,
+          h: 1080,
+          color: 0xffa41b16,
+        },
+        Right: {
+          rect: true,
+          w: 940,
+          h: 1080,
+          color: 0xffa41b16,
+        },
+      },
     }
   }
 
