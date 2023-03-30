@@ -53,5 +53,21 @@ export default class App extends Lightning.Component {
     }
   }
 
-  _init() {}
+  _init() {
+    this.tag('Reveal').animation({
+      duration: 1,
+      actions: [
+        {
+          t: 'Left',
+          p: 'x',
+          v: { 0: 0, 1: -940 },
+        },
+        {
+          t: 'Right',
+          p: 'x',
+          v: { 0: 0, 1: 940 },
+        },
+      ],
+    })
+  }
 }
