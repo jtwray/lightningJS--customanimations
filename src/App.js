@@ -92,16 +92,19 @@ export default class App extends Lightning.Component {
   _init() {
     let delay = 0
     for (const dot of this.tag('Loader').children) {
-      dot.animation({
-        duration: 1,
-        repeat: -1,
-        repeatDelay: 0.5,
-        delay,
-        actions: {
-          p: 'y',
-          v: { 0: 0, 0.5: -40, 1: 0 },
-        },
-      })
+      dot
+        .animation({
+          duration: 1,
+          repeat: -1,
+          repeatDelay: 0.5,
+          delay,
+          actions: {
+            p: 'y',
+            v: { 0: 0, 0.5: -40, 1: 0 },
+          },
+        })
+        .start()
+      delay += 0.2
     }
 
     this.tag('Reveal')
